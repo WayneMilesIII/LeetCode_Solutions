@@ -1,0 +1,21 @@
+//My Solution
+
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        int size = nums.size();
+        int runningSum = 0;
+        vector<int> solution;
+        if (nums.size() == 1)
+        {
+            return nums;
+        }
+
+        for (int i = 0; i < size; i++)
+        {
+            runningSum = runningSum + nums[i];
+            solution.push_back(runningSum);
+        }
+    return solution;
+    }
+};
