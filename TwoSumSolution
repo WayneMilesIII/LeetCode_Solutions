@@ -1,0 +1,27 @@
+//Runtime: 1157 ms
+//Memory: 10.1MB
+// O(n^2)
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target){
+        int j = 1;
+        vector<int> sol;
+
+            for (int i = 0; i < nums.size(); i++)
+            {
+                for (int j = 1; j < nums.size(); j++)
+                {
+                    if (nums[i] + nums[j] == target && i != j)
+                    {
+                        sol.push_back(i);
+                        sol.push_back(j);
+                        return sol;
+                    }
+                } 
+            }
+
+
+        return sol;
+    }
+};
